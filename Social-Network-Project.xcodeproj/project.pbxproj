@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29C09802C7EB63927EB4593F /* Pods_Social_Network_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12E319FA28CE605621895E78 /* Pods_Social_Network_Project.framework */; };
 		4513D2751FAB82BE0024FC22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4513D2741FAB82BE0024FC22 /* AppDelegate.swift */; };
 		4513D2771FAB82BE0024FC22 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4513D2761FAB82BE0024FC22 /* SignInVC.swift */; };
 		4513D27A1FAB82BE0024FC22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4513D2781FAB82BE0024FC22 /* Main.storyboard */; };
@@ -18,10 +19,10 @@
 		45797E891FABAF6C00CF8984 /* RoundBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45797E881FABAF6C00CF8984 /* RoundBtn.swift */; };
 		45797E8B1FABB0EE00CF8984 /* FancyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45797E8A1FABB0EE00CF8984 /* FancyField.swift */; };
 		45797E8D1FABB22B00CF8984 /* FancyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45797E8C1FABB22B00CF8984 /* FancyButton.swift */; };
-		B3C9A152028785964C44B700 /* Pods_Social_Network_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F72FD34AFAD3486EF70550 /* Pods_Social_Network_Project.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12E319FA28CE605621895E78 /* Pods_Social_Network_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Social_Network_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4513D2711FAB82BE0024FC22 /* Social-Network-Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Social-Network-Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4513D2741FAB82BE0024FC22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4513D2761FAB82BE0024FC22 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -35,9 +36,8 @@
 		45797E881FABAF6C00CF8984 /* RoundBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBtn.swift; sourceTree = "<group>"; };
 		45797E8A1FABB0EE00CF8984 /* FancyField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyField.swift; sourceTree = "<group>"; };
 		45797E8C1FABB22B00CF8984 /* FancyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyButton.swift; sourceTree = "<group>"; };
-		973DA0C920EA569F0576555F /* Pods-Social-Network-Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social-Network-Project.release.xcconfig"; path = "Pods/Target Support Files/Pods-Social-Network-Project/Pods-Social-Network-Project.release.xcconfig"; sourceTree = "<group>"; };
-		C6DE8C96D8C1A46125AABF0C /* Pods-Social-Network-Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social-Network-Project.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Social-Network-Project/Pods-Social-Network-Project.debug.xcconfig"; sourceTree = "<group>"; };
-		E4F72FD34AFAD3486EF70550 /* Pods_Social_Network_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Social_Network_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		855DE419DF65786C0C250F25 /* Pods-Social-Network-Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social-Network-Project.release.xcconfig"; path = "Pods/Target Support Files/Pods-Social-Network-Project/Pods-Social-Network-Project.release.xcconfig"; sourceTree = "<group>"; };
+		BF2523F8230DFAFBE3FFFCE3 /* Pods-Social-Network-Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social-Network-Project.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Social-Network-Project/Pods-Social-Network-Project.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,37 +45,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3C9A152028785964C44B700 /* Pods_Social_Network_Project.framework in Frameworks */,
+				29C09802C7EB63927EB4593F /* Pods_Social_Network_Project.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		03E02F805685BC388D75753C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E4F72FD34AFAD3486EF70550 /* Pods_Social_Network_Project.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		1A952A863D84E75D9B8F98AA /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C6DE8C96D8C1A46125AABF0C /* Pods-Social-Network-Project.debug.xcconfig */,
-				973DA0C920EA569F0576555F /* Pods-Social-Network-Project.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		4513D2681FAB82BE0024FC22 = {
 			isa = PBXGroup;
 			children = (
 				4513D2731FAB82BE0024FC22 /* Social-Network-Project */,
 				4513D2721FAB82BE0024FC22 /* Products */,
-				1A952A863D84E75D9B8F98AA /* Pods */,
-				03E02F805685BC388D75753C /* Frameworks */,
+				748604DAC535351E6D2649BA /* Pods */,
+				EFBD5FE03F1026CA5A47EE90 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,6 +119,23 @@
 				45797E861FABA22900CF8984 /* Constants.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		748604DAC535351E6D2649BA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BF2523F8230DFAFBE3FFFCE3 /* Pods-Social-Network-Project.debug.xcconfig */,
+				855DE419DF65786C0C250F25 /* Pods-Social-Network-Project.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EFBD5FE03F1026CA5A47EE90 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				12E319FA28CE605621895E78 /* Pods_Social_Network_Project.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +250,10 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Social-Network-Project/Pods-Social-Network-Project-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -257,6 +261,10 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -415,7 +423,7 @@
 		};
 		4513D2841FAB82BE0024FC22 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C6DE8C96D8C1A46125AABF0C /* Pods-Social-Network-Project.debug.xcconfig */;
+			baseConfigurationReference = BF2523F8230DFAFBE3FFFCE3 /* Pods-Social-Network-Project.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -431,7 +439,7 @@
 		};
 		4513D2851FAB82BE0024FC22 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 973DA0C920EA569F0576555F /* Pods-Social-Network-Project.release.xcconfig */;
+			baseConfigurationReference = 855DE419DF65786C0C250F25 /* Pods-Social-Network-Project.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
