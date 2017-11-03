@@ -31,6 +31,7 @@
 		4513D27E1FAB82BE0024FC22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4513D2801FAB82BE0024FC22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4513D2861FAB82EF0024FC22 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		456125D71FACE190004EEBCF /* Social-Network-Project.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Social-Network-Project.entitlements"; sourceTree = "<group>"; };
 		45797E831FABA19700CF8984 /* FancyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
 		45797E861FABA22900CF8984 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		45797E881FABAF6C00CF8984 /* RoundBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBtn.swift; sourceTree = "<group>"; };
@@ -73,6 +74,7 @@
 		4513D2731FAB82BE0024FC22 /* Social-Network-Project */ = {
 			isa = PBXGroup;
 			children = (
+				456125D71FACE190004EEBCF /* Social-Network-Project.entitlements */,
 				45797E851FABA21700CF8984 /* Util */,
 				45797E801FAB840400CF8984 /* Model */,
 				45797E821FAB841000CF8984 /* Controller */,
@@ -174,6 +176,11 @@
 					4513D2701FAB82BE0024FC22 = {
 						CreatedOnToolsVersion = 9.0.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -426,6 +433,7 @@
 			baseConfigurationReference = BF2523F8230DFAFBE3FFFCE3 /* Pods-Social-Network-Project.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Social-Network-Project/Social-Network-Project.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SFGNWP64GS;
 				INFOPLIST_FILE = "Social-Network-Project/Info.plist";
@@ -442,6 +450,7 @@
 			baseConfigurationReference = 855DE419DF65786C0C250F25 /* Pods-Social-Network-Project.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Social-Network-Project/Social-Network-Project.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SFGNWP64GS;
 				INFOPLIST_FILE = "Social-Network-Project/Info.plist";
