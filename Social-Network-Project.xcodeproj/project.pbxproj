@@ -14,6 +14,7 @@
 		4513D27C1FAB82BE0024FC22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4513D27B1FAB82BE0024FC22 /* Assets.xcassets */; };
 		4513D27F1FAB82BE0024FC22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4513D27D1FAB82BE0024FC22 /* LaunchScreen.storyboard */; };
 		4513D2871FAB82EF0024FC22 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4513D2861FAB82EF0024FC22 /* GoogleService-Info.plist */; };
+		456EE1721FAD0917003A5FB2 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456EE1711FAD0917003A5FB2 /* FeedVC.swift */; };
 		45797E841FABA19700CF8984 /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45797E831FABA19700CF8984 /* FancyView.swift */; };
 		45797E871FABA22900CF8984 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45797E861FABA22900CF8984 /* Constants.swift */; };
 		45797E891FABAF6C00CF8984 /* RoundBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45797E881FABAF6C00CF8984 /* RoundBtn.swift */; };
@@ -32,6 +33,7 @@
 		4513D2801FAB82BE0024FC22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4513D2861FAB82EF0024FC22 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		456125D71FACE190004EEBCF /* Social-Network-Project.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Social-Network-Project.entitlements"; sourceTree = "<group>"; };
+		456EE1711FAD0917003A5FB2 /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		45797E831FABA19700CF8984 /* FancyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
 		45797E861FABA22900CF8984 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		45797E881FABAF6C00CF8984 /* RoundBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBtn.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				4513D2761FAB82BE0024FC22 /* SignInVC.swift */,
+				456EE1711FAD0917003A5FB2 /* FeedVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -274,6 +278,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -293,6 +298,7 @@
 				4513D2771FAB82BE0024FC22 /* SignInVC.swift in Sources */,
 				45797E891FABAF6C00CF8984 /* RoundBtn.swift in Sources */,
 				45797E8D1FABB22B00CF8984 /* FancyButton.swift in Sources */,
+				456EE1721FAD0917003A5FB2 /* FeedVC.swift in Sources */,
 				4513D2751FAB82BE0024FC22 /* AppDelegate.swift in Sources */,
 				45797E841FABA19700CF8984 /* FancyView.swift in Sources */,
 				45797E871FABA22900CF8984 /* Constants.swift in Sources */,
