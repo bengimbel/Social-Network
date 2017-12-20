@@ -210,6 +210,9 @@
                                                     <constraint firstAttribute="width" constant="49" id="D3u-Zx-kB8"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="add-post"/>
+                                                <connections>
+                                                    <action selector="postBtnTapped:" destination="agl-zk-fhS" eventType="touchUpInside" id="Ka6-2S-Wtj"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -274,7 +277,7 @@
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="B58-Is-e0c"/>
                                                                     </constraints>
-                                                                    <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                                 </textView>
@@ -344,6 +347,7 @@
                         <viewLayoutGuide key="safeArea" id="Coq-FA-Uhm"/>
                     </view>
                     <connections>
+                        <outlet property="captionField" destination="riO-cY-abZ" id="u0m-zl-Yd4"/>
                         <outlet property="imageAdd" destination="us0-q0-LU3" id="pc3-p6-XNB"/>
                         <outlet property="tableView" destination="xef-Kd-lYR" id="QCD-GE-46V"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignIn" id="Aom-gO-2GX"/>
