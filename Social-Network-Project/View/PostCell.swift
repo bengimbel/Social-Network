@@ -40,7 +40,7 @@ class PostCell: UITableViewCell {
             self.postImg.image = img
         } else {
             let ref = Storage.storage().reference(forURL: post.imageUrl)
-            ref.getData(maxSize:  2 * 1024 * 1024, completion: { (data, error) in
+            ref.getData(maxSize: 10 * 1024 * 1024, completion: { (data, error) in
                 if error != nil {
                     print("BEN: Unable to download image from Firebase Storage")
                 } else {
@@ -49,7 +49,6 @@ class PostCell: UITableViewCell {
                         if let img = UIImage(data: imgData) {
                             self.postImg.image = img
                             FeedVC.imageCache.setObject(img, forKey: post.imageUrl as NSString)
-
                         }
                     }
                 }
