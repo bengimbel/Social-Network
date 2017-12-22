@@ -11,30 +11,30 @@ import SwiftKeychainWrapper
 import Firebase
 
 class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
+
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var imageAdd: CircleView!
     @IBOutlet weak var captionField: FancyField!
-    
+
     var posts = [Post]()
     var imagePicker: UIImagePickerController!
     static var imageCache: NSCache<NSString, UIImage> = NSCache()
     var imageSelected = false
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         tableView.delegate = self
         tableView.dataSource = self
-        
+
         imagePicker = UIImagePickerController()
         imagePicker.allowsEditing = true
         imagePicker.delegate = self
-        
+
         DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
-            
+
             self.posts = [] // THIS IS THE NEW LINE
-            
+
             if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
                 for snap in snapshot {
                     print("SNAP: \(snap)")
@@ -45,26 +45,25 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
                     }
                 }
             }
+
             self.tableView.reloadData()
         })
     }
-    
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let post = posts[indexPath.row]
-        
+
         if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell {
-            
+
             if let img = FeedVC.imageCache.object(forKey: post.imageUrl as NSString) {
-                
                 cell.configureCell(post: post, img: img)
             } else {
                 cell.configureCell(post: post)
@@ -74,7 +73,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
             return PostCell()
         }
     }
-    
+
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
             imageAdd.image = image
@@ -84,12 +83,12 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         }
         imagePicker.dismiss(animated: true, completion: nil)
     }
-    
-    
+
+
     @IBAction func addImageTapped(_ sender: Any) {
         present(imagePicker, animated: true, completion: nil)
     }
-    
+
     @IBAction func postBtnTapped(_ sender: Any) {
         guard let caption = captionField.text, caption != "" else {
             print("BEN: Caption must be entered")
@@ -103,7 +102,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
             let imgUid = NSUUID().uuidString
             let metadata = StorageMetadata()
             metadata.contentType = "image/jpeg"
-            
+
             DataService.ds.REF_POST_IMAGES.child(imgUid).putData(imgData, metadata: metadata, completion: { (metadata, error) in
                 if error != nil {
                     print("BEN: Unable to upload image to Firebase Storage")
@@ -117,24 +116,24 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
             })
         }
     }
-    
+
     func postToFirebase(imgUrl: String) {
         let post: Dictionary<String, AnyObject> = [
             "caption": captionField.text as AnyObject,
             "imageUrl": imgUrl as AnyObject,
             "likes": 0 as AnyObject
             ]
-        
+
         let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
         firebasePost.setValue(post)
-        
+
         captionField.text = ""
         imageSelected = false
         imageAdd.image = UIImage(named: "add-image")
-        
+
         tableView.reloadData()
     }
-    
+
     @IBAction func signOutTapped(_ sender: Any) {
         let keychainResult = KeychainWrapper.standard.removeObject(forKey: KEY_UID)
         print("BEN: id removed from keychain - \(keychainResult)")
@@ -142,3 +141,5 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         performSegue(withIdentifier: "goToSignIn", sender: nil)
     }
 }
+
+

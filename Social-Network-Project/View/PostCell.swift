@@ -5,12 +5,12 @@
 //  Created by Ben Gimbel on 12/15/17.
 //  Copyright © 2017 Ben Gimbel. All rights reserved.
 //
-
+//
 import UIKit
 import Firebase
 
 class PostCell: UITableViewCell {
-    
+
     @IBOutlet weak var profileImg: UIImageView!
     @IBOutlet weak var usernameLbl: UILabel!
     @IBOutlet weak var postImg: UIImageView!
@@ -20,27 +20,27 @@ class PostCell: UITableViewCell {
 
     var post: Post!
     var likesRef: DatabaseReference!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+
         let tap = UITapGestureRecognizer(target: self, action: #selector(likeTapped))
         tap.numberOfTapsRequired = 1
         likeImg.addGestureRecognizer(tap)
         likeImg.isUserInteractionEnabled = true
     }
-    
+
     func configureCell(post: Post, img: UIImage? = nil) {
         self.post = post
         likesRef = DataService.ds.REF_USER_CURRENT.child("likes").child(post.postKey)
         self.caption.text = post.caption
         self.likesLbl.text = "\(post.likes)"
-        
+
         if img != nil {
             self.postImg.image = img
         } else {
             let ref = Storage.storage().reference(forURL: post.imageUrl)
-            ref.getData(maxSize: 2 * 1024 * 1024, completion: { (data, error) in
+            ref.getData(maxSize:  2 * 1024 * 1024, completion: { (data, error) in
                 if error != nil {
                     print("BEN: Unable to download image from Firebase Storage")
                 } else {
@@ -49,12 +49,13 @@ class PostCell: UITableViewCell {
                         if let img = UIImage(data: imgData) {
                             self.postImg.image = img
                             FeedVC.imageCache.setObject(img, forKey: post.imageUrl as NSString)
+
                         }
                     }
                 }
             })
         }
-        
+
         likesRef.observeSingleEvent(of: .value) { (snapshot) in
             if let _ = snapshot.value as? NSNull {
                 self.likeImg.image = UIImage(named: "empty-heart")
@@ -63,7 +64,7 @@ class PostCell: UITableViewCell {
             }
         }
     }
-    
+
     @objc func likeTapped(sender: UITapGestureRecognizer) {
         likesRef.observeSingleEvent(of: .value) { (snapshot) in
             if let _ = snapshot.value as? NSNull {
@@ -77,5 +78,6 @@ class PostCell: UITableViewCell {
             }
         }
     }
-    
+
 }
+

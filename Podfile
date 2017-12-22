@@ -8,6 +8,7 @@ target 'Social-Network-Project' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
+  pod 'FirebaseUI/Storage'
   pod 'Bolts'
   pod 'FBSDKLoginKit'
   pod 'FBSDKCoreKit'
